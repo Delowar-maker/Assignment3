@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open The Window</title>
+    <link rel="stylesheet" href="../css/milligram.css" />
+  </head>
+  <body>
+    <button onclick="openNewWindow()">Open New Window</button>
+
+    <script>
+      function openNewWindow() {
+        var url = "https://www.example.com";
+        var width = 800;
+        var height = 600;
+
+        window.open(url, +width, +height);
+      }
+    </script>
+  </body>
+</html>
