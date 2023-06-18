@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Implement JavaScript validation for the form fields:</title>
+    <link rel="stylesheet" href="../css/milligram.css" />
+  </head>
+  <body>
+    <h1>JS DOM Working with Form Input:</h1>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required /><br />
+      <span id="nameError" class="error"></span><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required /><br />
+      <span id="emailError" class="error"></span><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required /><br />
+      <span id="passwordError" class="error"></span><br />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" required /><br />
+      <span id="confirmPasswordError" class="error"></span><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script src="./validateForm.js"></script>
+  </body>
+</html>
