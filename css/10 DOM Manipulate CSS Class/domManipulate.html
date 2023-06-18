@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .highlight {
+        background-color: orangered;
+      }
+    </style>
+    <link rel="stylesheet" href="../milligram.css" />
+  </head>
+  <body>
+    <button onclick="addHighlight()">Click Me color Change</button>
+    <p id="myParagraph">This is my paragraph.</p>
+
+    <script>
+      function addHighlight() {
+        var paragraph = document.getElementById("myParagraph");
+        paragraph.classList.add("highlight");
+      }
+    </script>
+  </body>
+</html>
