@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Clicked!!!</title>
+    <link rel="stylesheet" href="../css/milligram.css" />
+    <script>
+      function changeText() {
+        var paragraph = document.getElementById("myParagraph");
+        paragraph.textContent = "Button Clicked!";
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="changeText()">Click me</button>
+    <p id="myParagraph">Change</p>
+  </body>
+</html>
