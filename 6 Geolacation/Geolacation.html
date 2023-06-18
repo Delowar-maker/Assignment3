@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+  </head>
+  <body>
+    <h1>Current Location</h1>
+    <p>Latitude: <span id="latitude"></span></p>
+    <p>Longitude: <span id="longitude"></span></p>
+
+    <script>
+      function getCurrentLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              var latitude = position.coords.latitude;
+              var longitude = position.coords.longitude;
+
+              document.getElementById("latitude").textContent = latitude;
+              document.getElementById("longitude").textContent = longitude;
+            },
+            function (error) {
+              console.log("Error retrieving location: " + error.message);
+            }
+          );
+        } else {
+          console.log("Geolocation is not supported by this browser.");
+        }
+      }
+
+      getCurrentLocation();
+    </script>
+  </body>
+</html>
