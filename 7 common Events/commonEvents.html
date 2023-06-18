@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myImage {
+        width: 300px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Common Events</h1>
+
+    <img id="myImage" src="./cat.jpg" alt="Original Image" />
+
+    <script>
+      function displayClickCoordinates(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        alert("Clicked at coordinates (x, y): " + x + ", " + y);
+      }
+
+      function displayKeyCode(event) {
+        var keyCode = event.keyCode || event.which;
+        alert("Pressed key code: " + keyCode);
+      }
+
+      function changeImageSource() {
+        var image = document.getElementById("myImage");
+        image.src = "new_image.jpg";
+      }
+
+      // Add event listeners
+      document.addEventListener("click", displayClickCoordinates);
+      document.addEventListener("keydown", displayKeyCode);
+      document
+        .getElementById("myImage")
+        .addEventListener("mouseover", changeImageSource);
+    </script>
+  </body>
+</html>
