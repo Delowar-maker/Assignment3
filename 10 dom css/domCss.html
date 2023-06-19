@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.DOM Manipulate CSS Class</title>
+    <style>
+      .highlight {
+        background-color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="highlightButton">Highlight</button>
+    <p id="paragraph">This is a paragraph.</p>
+
+    <script>
+      var highlightButton = document.getElementById("highlightButton");
+      var paragraph = document.getElementById("paragraph");
+
+      highlightButton.addEventListener("click", function () {
+        paragraph.classList.add("highlight");
+      });
+    </script>
+  </body>
+</html>
