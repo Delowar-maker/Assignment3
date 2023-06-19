@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Element & Append Element</title>
+    <link rel="stylesheet" href="../css/milligram.css" />
+    <script>
+      function createListItems() {
+        var ul = document.getElementById("myList");
+
+        for (var i = 1; i <= 5; i++) {
+          var li = document.createElement("li");
+          li.appendChild(document.createTextNode(i));
+          ul.appendChild(li);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Create and Append Elements</h1>
+    <ul id="myList"></ul>
+
+    <script>
+      createListItems();
+    </script>
+  </body>
+</html>
