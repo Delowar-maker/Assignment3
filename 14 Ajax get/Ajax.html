@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX GET Request</title>
+    <link rel="stylesheet" href="../css/milligram.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <button onclick="sendGetRequest()">Send A GET Request</button>
+
+    <script>
+      function sendGetRequest() {
+        axios
+          .get("https://api.example.com/data")
+          .then(function (response) {
+            console.log(response.data);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+    </script>
+  </body>
+</html>
